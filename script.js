@@ -58,3 +58,30 @@ const typed=new Typed('.multiple-text',{
   backDelay:1000,
   loop:true
 });
+
+const themeToggle=document.querySelector("input[id=ckbox]");
+var root = document.querySelector(':root');
+
+function dark() {
+  root.style.setProperty('--bg-color', '#0a062d');
+  root.style.setProperty('--second-bg-color', '#1c1830');
+  root.style.setProperty('--text-color', '#cceeff');
+  root.style.setProperty('--main-color', '#00dbeb');
+
+}
+function light() {
+  root.style.setProperty('--bg-color', '#F5F5F5');
+  root.style.setProperty('--second-bg-color', '#F2EAD3');
+  root.style.setProperty('--text-color', '#3F2305');
+  root.style.setProperty('--main-color', '#6C3428');
+
+}
+themeToggle.addEventListener("change",function(){
+  if(this.checked){
+    console.log("checked")
+    dark()
+  }else{
+    light()
+  }
+})
+
