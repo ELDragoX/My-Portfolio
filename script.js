@@ -79,9 +79,9 @@ function light() {
 themeToggle.addEventListener("change",function(){
   if(this.checked){
     console.log("checked")
-    dark()
-  }else{
     light()
+  }else{
+    dark()
   }
 })
 
